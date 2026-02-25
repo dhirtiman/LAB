@@ -1,3 +1,6 @@
+// 22. Write a program to create a Binary Search Tree (BST) and perform inorder, preorder, and
+// postorder traversals.
+
 #include <stdio.h>
 #include <stdlib.h>
 #include <conio.h>
@@ -77,6 +80,26 @@ int main()
     inorder_traversal(root);
     printf("\n postorder travrsal:");
     post_order_traversal(root);
-    getch();
+    free(root);
     return 0;
 }
+
+/*
+.\binTree.exe
+inserted at right:
+inserted at left:
+inserted at right:
+inserted at left:
+inserted at right:
+inserted at right:
+inserted at left:
+inserted at left:
+inserted at right:
+inserted at right:
+inserted at left:
+
+ pre_order travrsal:2 1 0 5 3 9 6
+ Inorder travrsal:0 1 2 3 5 6 9
+ postorder travrsal:0 1 3 6 9 5 2
+
+*/
