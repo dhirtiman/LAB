@@ -1,4 +1,4 @@
-// menu driven program for double ended queue
+// 16. Write a program to implement Double Ended Queue (Deque) using arrays.
 
 #include <stdio.h>
 #define MAX 5

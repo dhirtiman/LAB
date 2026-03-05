@@ -1,4 +1,6 @@
 // binary tree creation and insert and deleting node
+// 21. Write a program to create a binary tree, perform insertion and deletion operations, and
+// display the tree after each operation.
 
 #include <stdio.h>
 #include <stdlib.h>
