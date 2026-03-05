@@ -1,4 +1,4 @@
-// 23. Write a program to represent a Graph using adjacency matrix.
+// 23. //22 Write a program to represent a Graph using adjacency matrix.
 
 #include <stdio.h>
 
