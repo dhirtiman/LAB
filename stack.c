@@ -1,7 +1,7 @@
-// Implement stack operations in c
+// 11 . write a program to implement stack operations in c
 
-#include<stdio.h>
-#include<conio.h>
+#include <stdio.h>
+#include <conio.h>
 
 #define MAX 5
 
@@ -12,7 +12,7 @@ void push()
 {
     int value;
 
-    if(top == MAX - 1)
+    if (top == MAX - 1)
     {
         printf("\nStack Overflow! Cannot push.");
         return;
@@ -27,17 +27,17 @@ void push()
 
 void pop()
 {
-    if(top == -1)
+    if (top == -1)
     {
         printf("\nStack Underflow! Cannot pop.");
         return;
     }
     printf("\nPopped element: %d", stack[top--]);
- }
+}
 
 void peek()
 {
-    if(top == -1)
+    if (top == -1)
     {
         printf("\nStack is empty.");
         return;
@@ -48,13 +48,13 @@ void peek()
 void display()
 {
     int i;
-    if(top == -1)
+    if (top == -1)
     {
         printf("\nStack is empty.");
         return;
     }
     printf("\nStack elements are:\n");
-    for(i = top; i >= 0; i--)
+    for (i = top; i >= 0; i--)
     {
         printf("%d\n", stack[i]);
     }
@@ -76,24 +76,107 @@ void main()
         printf("\n\nEnter your choice: ");
         scanf("%d", &choice);
 
-        switch(choice)
+        switch (choice)
         {
-            case 1: push();
-                    break;
+        case 1:
+            push();
+            break;
+        case 2:
+            pop();
+            break;
+        case 3:
+            peek();
+            break;
+        case 4:
+            display();
+            break;
 
-            case 2: pop();
-                    break;
-            case 3: peek();
-                    break;
-            case 4: display();
-                    break;
+        case 5:
+            printf("\nExiting...");
+            break;
 
-            case 5: printf("\nExiting...");
-                    break;
-
-            default: printf("\nInvalid choice!");
+        default:
+            printf("\nInvalid choice!");
         }
 
-    } while(choice != 5);
-
+    } while (choice != 5);
 }
+
+/*
+
+
+--- STACK MENU ---
+1. Push
+2. Pop
+3. Peek
+4. Display
+5. Exit
+
+Enter your choice: 1
+
+Enter value to push: 10
+
+10 pushed successfully.
+
+--- STACK MENU ---
+1. Push
+2. Pop
+3. Peek
+4. Display
+5. Exit
+
+Enter your choice: 1
+
+Enter value to push: 20
+
+20 pushed successfully.
+
+--- STACK MENU ---
+1. Push
+2. Pop
+3. Peek
+4. Display
+5. Exit
+
+Enter your choice: 1
+
+Enter value to push: 30
+
+30 pushed successfully.
+
+--- STACK MENU ---
+1. Push
+2. Pop
+3. Peek
+4. Display
+5. Exit
+
+Enter your choice: 2
+
+Popped element: 30
+
+--- STACK MENU ---
+1. Push
+2. Pop
+3. Peek
+4. Display
+5. Exit
+
+Enter your choice: 4
+
+Stack elements are:
+20
+10
+
+
+--- STACK MENU ---
+1. Push
+2. Pop
+3. Peek
+4. Display
+5. Exit
+
+Enter your choice: 5
+
+Exiting...
+*/
