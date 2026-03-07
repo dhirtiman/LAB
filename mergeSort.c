@@ -64,26 +64,23 @@ void mergeSort(int arr[], int left, int right)
     }
 }
 
-void printArray(int arr[], int size)
-{
-    int i;
-    for (i = 0; i < size; i++)
-    {
-        printf("%d ", arr[i]);
-    }
-    printf("\n");
-}
-
 int main()
 {
     int arr[] = {5, 4, 3, 2, 1, 0, 9, 8, 7, 6};
     int n = sizeof(arr) / sizeof(arr[0]);
-
+    int i;
     printf("Original Array: \n");
-    printArray(arr, n);
+     for (i = 0; i < n; i++)
+    {
+        printf("%d ", arr[i]);
+    }
+    printf("\n");
     mergeSort(arr, 0, n - 1);
     printf("Sorted Array: \n");
-    printArray(arr, n);
+    for (i = n-1; i >= 0; i--)
+    {
+        printf("%d ", arr[i]);
+    }
     return 0;
 }
 
@@ -91,5 +88,5 @@ int main()
 Original Array:
 5 4 3 2 1 0 9 8 7 6
 Sorted Array:
-0 1 2 3 4 5 6 7 8 9
+9 8 7 6 5 4 3 2 1 0
 */
