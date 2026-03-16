@@ -1,3 +1,5 @@
+// / q23Write a program to perform Merge Sort on a given set of elements and display the result in descending order.
+
 #include <stdio.h>
 #include <stdlib.h>
 
@@ -40,7 +42,7 @@ void merge(int arr[], int left, int mid, int right)
         }
         k++;
     }
-
+    
     while (i < n1)
     {
         arr[k++] = L[i++];
@@ -70,14 +72,14 @@ int main()
     int n = sizeof(arr) / sizeof(arr[0]);
     int i;
     printf("Original Array: \n");
-     for (i = 0; i < n; i++)
+    for (i = 0; i < n; i++)
     {
         printf("%d ", arr[i]);
     }
     printf("\n");
     mergeSort(arr, 0, n - 1);
     printf("Sorted Array: \n");
-    for (i = n-1; i >= 0; i--)
+    for (i = n - 1; i >= 0; i--)
     {
         printf("%d ", arr[i]);
     }

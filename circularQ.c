@@ -3,9 +3,11 @@
 
 int cq[MAX], front = -1, rear = -1;
 
-void enqueue() {
+void enqueue()
+{
     int x;
-    if ((front == 0 && rear == MAX-1) || (front == rear+1)) {
+    if ((front == 0 && rear == MAX - 1) || (front == rear + 1))
+    {
         printf("Queue Full\n");
         return;
     }
@@ -20,8 +22,10 @@ void enqueue() {
     cq[rear] = x;
 }
 
-void dequeue() {
-    if (front == -1) {
+void dequeue()
+{
+    if (front == -1)
+    {
         printf("Queue Empty\n");
         return;
     }
@@ -34,30 +38,43 @@ void dequeue() {
         front = (front + 1) % MAX;
 }
 
-void display() {
+void display()
+{
     int i;
-    if (front == -1) {
+    if (front == -1)
+    {
         printf("Queue Empty\n");
         return;
     }
 
     printf("Queue: ");
-    for ( i = front; i != (rear+1)%MAX ; i = (i+1)%MAX ) {
-	 printf("%d ", cq[i]);
-    }  
+    for (i = front; i != (rear + 1) % MAX; i = (i + 1) % MAX)
+    {
+        printf("%d ", cq[i]);
+    }
 }
 
-int main() {
+int main()
+{
     int ch;
-    while (1) {
+    while (1)
+    {
         printf("\n1.enqueue 2.dequeue 3.display 4.exit\n");
         scanf("%d", &ch);
 
-        switch (ch) {
-            case 1: enqueue(); break;
-            case 2: dequeue(); break;
-            case 3: display(); break;
-            case 4: return 0;
+        switch (ch)
+        {
+        case 1:
+            enqueue();
+            break;
+        case 2:
+            dequeue();
+            break;
+        case 3:
+            display();
+            break;
+        case 4:
+            return 0;
         }
     }
 }

@@ -1,4 +1,4 @@
-// heap sort
+// 24. Write a program to sort a given set of elements using Heap Sort.
 
 #include <stdio.h>
 #include <stdlib.h>
