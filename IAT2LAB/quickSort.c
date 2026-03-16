@@ -60,3 +60,12 @@ int main()
 
     return 0;
 }
+
+/*
+Enter number of elements: 10
+Enter elements:
+1 2 3 5 6 7 8 -1 -2
+99
+Sorted array:
+-2 -1 1 2 3 5 6 7 8 99
+*/
