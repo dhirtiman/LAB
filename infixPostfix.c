@@ -23,8 +23,6 @@ char peek()
 
 int priority(char ch)
 {
-   if (ch == '(')
-      return 0;
    if (ch == '+' || ch == '-')
       return 1;
    if (ch == '*' || ch == '/' || ch == '%')
@@ -57,7 +55,7 @@ int main()
       }
       else
       {
-         while (priority(peek()) >= priority(*e))
+         while (priority(stack[top]) >= priority(*e))
          {
             printf("%c", pop());
          }

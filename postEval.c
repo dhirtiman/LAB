@@ -36,7 +36,7 @@ int pop() {
 int main()
 {
     char exp[200],*token;
-    int operand1,operand2,result;
+    int op1,op2,result;
 
     printf("Enter the Postfix Expression(space separated):\n");
     fgets(exp,sizeof(exp),stdin);
@@ -46,15 +46,15 @@ int main()
 		push(atoi(token));
 	}
 	else {
-		operand2 = pop();
-		operand1 = pop();
+		op2 = pop();
+		op1 = pop();
 		switch(token[0]) {
-		   case '+': result = operand1+operand2; break;
-		   case '-': result = operand1-operand2; break;
-		   case '*': result = operand1*operand2; break;
-		   case '/': result = operand1/operand2; break;
-		   case '%': result = operand1%operand2; break;
-   		   case '^': result = pow(operand1,operand2); break;
+		   case '+': result = op1+op2; break;
+		   case '-': result = op1-op2; break;
+		   case '*': result = op1*op2; break;
+		   case '/': result = op1/op2; break;
+		   case '%': result = op1%op2; break;
+   		   case '^': result = pow(op1,op2); break;
 		   default: printf("Invalid Operator\n"); return 1;
 		}
 		push (result);
