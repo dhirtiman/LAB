@@ -5,6 +5,61 @@
 #include <conio.h>
 #include <stdlib.h>
 
+/*
+include io and io , stdlib.h / malloc.h if turbo c
+
+1.define structure node , with int, node*
+2.declare a global node *head =NULL;
+
+define display fn:
+  initialize *temp with head
+  if(temp==NULL) : ll is empty
+    print empty
+    return
+  while temp!=NULL
+    print temp->data
+    set temp = temp->next
+
+define insert_at_end function , insend(int value):
+    declare two pointers, newnode and temp
+    allocate mememory to newnode
+    assign newnode->data with value
+            newnode->next with NULL
+    if head == NULL : empty llist
+       set head = newnode
+       return
+    else:
+        set temp = head
+        while temp->next !=NULL 
+          set temp = temp->next
+        
+        set temp-next = newnode
+
+        call display
+define deleteElement fn(int value)
+    initialize temp with head, prev wit null
+    check if empty , return
+    check if element at the begining:
+      if(head->data == value)
+         set head=head->next
+         free(temp)
+         display
+         return
+    do this until , element match is found or list ends
+     while( temp!=NULL && temp->data !=value)
+       set prev = temp
+           temp = temp->next
+     if(temp == null): list ended
+        print not found
+        return
+     set prev->next = temp->next
+     free(temp)
+     display()
+     return
+     
+in main create a menu driver program to demo all operations
+*/
+
 struct node
 {
     int data;
@@ -45,14 +100,12 @@ void insert_at_end(int value)
     if (head == NULL)
     {
         head = newnode;
+        return
     }
-    else
-    {
-        temp = head;
-        while (temp->next != NULL)
-            temp = temp->next;
-        temp->next = newnode;
-    }
+    temp = head;
+    while (temp->next != NULL)
+        temp = temp->next;
+    temp->next = newnode;
 
     display();
 }
