@@ -38,7 +38,10 @@ void deleteFront()
     { // last element
         front = rear = -1;
     }
-    front = (front + 1) % MAX
+    else
+    {
+        front = (front + 1) % MAX
+    }
 }
 
 // Delete from Rear
