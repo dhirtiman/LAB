@@ -19,7 +19,7 @@ extract strings lengths using
 
 iterate  i from 0  to texlen-patlen 
    iterate j from 0 to patlen-1 
-    check if(text[i+j] != pattern[j]): meaaning check if any of the characters dont match
+    check if(text[i+j] != pattern[j]): meaning check if any of the characters dont match
        yes, break
     check if j == patlen-1 : we were abke to traverse whole pattern without interuption
      yes, print pattern found at index i , set flag = 1
