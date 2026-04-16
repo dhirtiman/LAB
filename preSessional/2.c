@@ -2,6 +2,23 @@
 
 #include <stdio.h>
 #include <conio.h>
+/*
+include io and io 
+
+define 2d array of arbritary size , iterators, size variable , sum
+take the size as input from user, n
+input elemenst into the array using a double loop 
+  from i , 0 to n-1
+    from j , 0 to n-1
+	  store value -> arr[i][j]
+
+ traverse the array diagonally 
+  from i , 0  to n-1
+    add arr[i][i] to sum
+
+  print sum
+*/
+
 
 void main()
 {
