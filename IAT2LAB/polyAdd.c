@@ -5,6 +5,53 @@
 #include <stdio.h>
 #include <stdlib.h>
 
+/*
+include io,io and malloc.h
+define node with , float co , int expo and node *link
+
+insertBegin fn , fn(head,co,expo):
+  create newnode allocate memory assign data
+  set newnode->link = head
+  return newnode
+
+create fn , fn(node *head) -> node
+  input number of terms , n 
+  iterate i from n to 1
+    input co and exp ,  for term i 
+    set head = insertBegin(head,co,exp)
+
+addFunction , fn(node *poly1,node *poly2) -> node
+  initialize two pointters for each poly heads,
+    p1,p2
+    *result = NULL
+  iteratee until either of the polynomials are done traversing 
+    while(p1!=null && p2!=null)
+      if(p1->expo == p2->expo):  exponents are same , we can add the whole term
+        result = insertbegin(result,p1->co+p2->co,p1->expo)
+        traverse both ,cuz both were used
+        p1 = p1->link
+        p2 = p2->link
+      elseif( p1->expo > p2->expo) : exponents dont match and p1 is bigger 
+      so we have to insert p1 at the begining only
+        result = insertBeign(result,p1->co,p1->expo)
+        move p1 only
+        p1 = p1->link
+      else: p2 expo is larger so 
+         result = inserbgin(result,p2->co,p2->expo)
+         p2 = p2->link
+
+    while(p1!=null):
+       result = insertBeign(result,p1->co,p1->expo)
+       p1 = p1->next
+    while(p2!=null):
+         result = inserbgin(result,p2->co,p2->expo)
+         p2 = p2->link
+    this was to input rest of the terms from either of the polynomials
+
+    return result
+
+*/
+
 struct node
 {
     float co;
@@ -108,6 +155,14 @@ int main()
     sum = add(p1, p2);
 
     printf("\nResult:\n");
+
+    /*
+    to display 
+    iterate t from sum to until t is null , t = t->link
+
+      print co exp likee "%.1fx^%d"
+        if its not the end term print " + " after
+    */
 
     for (t = sum; t != NULL; t = t->link)
     {
