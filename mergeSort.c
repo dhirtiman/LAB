@@ -9,7 +9,7 @@ void merge(int arr[], int left, int mid, int right)
 {
     int i, j, k;
     int n1 = mid - left + 1;    // size of the left subarray
-    const int n2 = right - mid; // size of the right subarray
+    int n2 = right - mid; // size of the right subarray
 
     // creating temporary arrays
 
@@ -42,7 +42,7 @@ void merge(int arr[], int left, int mid, int right)
         }
         k++;
     }
-    
+
     while (i < n1)
     {
         arr[k++] = L[i++];
