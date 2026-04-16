@@ -1,5 +1,23 @@
 // 1. write a program to find the second largest element in an array.
 
+/*
+to run this program in turbo c
+include stdio,conio,limits
+
+define arr,n i, lg,sc
+take in size of array , input array elements
+check if only 1 element exists , fail if fail
+traverse the arraay 
+ if element is larger than lg , set lg = element , sc = lg
+ else if, element is larger than sc and !=lg , set sc = lg
+
+if(sc is still INT_MIN)
+  print no found
+else:
+  print sc
+
+*/
+
 #include <stdio.h>
 #include <conio.h>
 #include <limits.h>
