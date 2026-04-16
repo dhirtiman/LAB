@@ -4,6 +4,22 @@
 #include <stdio.h>
 #include <conio.h>
 
+/*
+include pakages 
+declare 2d arry , iterators, row size , cols size
+
+take , rows and cols input
+ input 2d array elements , 
+   i from 0 to rows-1
+     j from 0 to cols-1
+	   scanf - > &arr[i][j]
+  
+  iterate again 
+    print each element with tab space
+	after each row ,print new line
+*/
+
+
 void main()
 {
 	int a[101][101], i, j, rows, cols;
