@@ -45,7 +45,7 @@ struct node *findMin(struct node *root)
 struct node *deleteNode(struct node *root, int value)
 {
     if (root == NULL)
-        return root;
+        return NULL;
 
     if (value < root->data)
         root->left = deleteNode(root->left, value);

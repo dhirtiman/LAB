@@ -16,7 +16,7 @@ void insertRear(int value)
     }
     if (front == -1)
     { // First element
-        front = rear = 0;
+        front = 0;
     }
 
     rear = (rear + 1) % MAX;

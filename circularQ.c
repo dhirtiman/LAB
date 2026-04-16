@@ -6,7 +6,7 @@ int cq[MAX], front = -1, rear = -1;
 void enqueue()
 {
     int x;
-    if ((front == 0 && rear == MAX - 1) || (front == rear + 1))
+    if ((rear + 1) % MAX == front)
     {
         printf("Queue Full\n");
         return;
